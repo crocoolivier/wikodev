@@ -97,6 +97,7 @@ sub repack_boot {
 
 	# cleanup
 	unlink("ramdisk-repack.cpio.gz") or die $!;
+	unlink("zImageMod") or die $!;
 	system("rm new-ramdisk-repack.cpio.gz");
 
 	print "\nRepacked $ARGV[0] image into '$outfile'\n";
